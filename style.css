@@ -39,7 +39,7 @@ button {
     font-size: 2rem;
 }
 
-#button-row {
+.button-row {
     display: flex;
 }
 
@@ -119,4 +119,16 @@ button {
 #footer img {
     width: 25px;
     margin-left: 10px;
+}
+
+button.orange-button:active:hover{
+    background-color: rgb(192, 129, 45);
+}
+
+button#clear:active:hover{
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+button.number:active:hover {
+    background-color: rgba(176, 176, 176, 0.8);
 }
