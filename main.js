@@ -9,6 +9,7 @@ let display = document.getElementById('display');
 let clear = document.getElementById('clear');
 let buttons = document.querySelectorAll('.button-row > button');
 let operatorButtons = document.querySelectorAll('.operator');
+let darkModeButton = document.getElementById('dark-mode-button');
 
 // Operator functions
     // Addition
@@ -127,3 +128,11 @@ for (let i = 0; i < buttons.length; i++) {
 
     });
 };
+
+// Dark mode toggle switch
+darkModeButton.addEventListener('change', function() {
+    document.body.classList.toggle('dark-mode');
+    document.getElementById('dark-mode-text').classList.toggle('dark-mode');
+    document.getElementById('footer-content').classList.toggle('dark-mode');
+    document.getElementById('calculator').classList.toggle('calculator-dark-mode-border');
+});
