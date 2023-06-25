@@ -57,6 +57,24 @@ function reset() {
     resetOperatorButton();
 };
 
+// Operate function
+function operate(a, b) {
+    switch (operator) {
+        case '+':
+            add(a, b);
+            break;
+        case '-':
+            subtract(a, b);
+            break;
+        case '*':
+            multiply(a, b);
+            break;
+        case '/':
+            divide(a, b);  
+            break;            
+    };
+};
+
 // Calculations
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function() {
@@ -91,31 +109,9 @@ for (let i = 0; i < buttons.length; i++) {
             display.textContent = num2;
         };
 
-        // If this.id is =, operator is +, and num1 and num2 are not both 0
-        if (this.id === '=' && operator === '+' && (num1 !== 0 || num2 !== 0)) {
-           add(num1, num2);
+        if (this.id === '='  && (num1 !== 0 || num2 !== 0)) {
+            operate(num1, num2);
         };
-
-        // If this.id is =, operator is - and num1 and num2 are not both 0
-        if (this.id === '=' && operator === '-' && (num1 !== 0 || num2 !== 0)) {
-            subtract(num1, num2); 
-        };
-
-        // If this.id is =, operator is *, and num1 and num2 are not both 0
-        if (this.id === '=' && operator === '*' && (num1 !== 0 || num2 !== 0)) {
-            multiply(num1, num2); 
-        };
-
-        // If this.id is =, operator is /, and num1 and num2 are not both 0
-        if (this.id === '=' && operator === '/' && (num1 !== 0 || num2 !== 0)) {
-            divide(num1, num2); 
-        };
-
-        // // If operator and result is not undefined and this.id is a number other than 0, put this.id in num2 and show num2 on display
-        // if (operator !== undefined && result !== undefined && this.id > 0) {
-        //     num2 = this.id;
-        //     display.textContent = num2;
-        // } 
 
     });
 };
