@@ -10,3 +10,4 @@ A simple calculator inspired by the Apple calculator.
 - [ ] Auto-resizing of font on display
 - [ ] +/- button
 - [ ] Percentage (%) button
+- [ ] Keyboard support
