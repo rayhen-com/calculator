@@ -120,8 +120,8 @@ for (let i = 0; i < buttons.length; i++) {
             display.textContent = num2;
         };
 
-        // If this.id is = and at least one of both num1 and num2 are not 0, calculate result
-        if (this.id === '='  && (num1 !== 0 || num2 !== 0)) {
+        // If this.id is = and at least one of both num1 and num2 are not 0, and num2 is not undefined, calculate result
+        if (this.id === '='  && (num1 !== 0 || num2 !== 0) && num2 !== undefined) {
             operate(num1, num2);
         };
 
